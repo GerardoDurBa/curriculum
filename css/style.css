@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* ###################### MENU DE NAVEGACION ###################*/
+
+header::before{
+    content:"";
+    display: block;
+    margin-bottom: 80px;
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+}
+
+.enlaces-header{
+    font-weight: 300;
+    margin: auto;
+}
+
+.nav .enlaces-header a{
+    color: #5d6678;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.nav .enlaces-header a:hover{
+    color: #FFFFFF;
+    background-color: #d03d3d;
+    border-color: #d03d3d;
+    transition: all ease-in-out .45s;
+}
+
+.titulospro{
+    text-align: left;
+    margin: 20px 0;
+}
+
+.contenido-header{
+    width: 80%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contenido-header > img{
+    width: 300px;
+    height: 300px;
+    margin-left: 50px;
+    animation: ease-in animacion 0.5s;
+}
+
+@keyframes animacion {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.textos-header{
+    margin: 0 0 0 30px;
+}
+
+.contenido-header p{
+    font-weight: 300;
+    margin-top: 14px;
+    color: #5d6678;
+    text-align: justify;
+}
+
+.contenido-header a{
+    margin: 28px 0 0 0;
+    width: 150px;
+    display: inline-block;
+    background: #d03d3d;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(97, 31, 31, 0.46);
+}
