@@ -50,6 +50,7 @@ nav{
 .enlaces-header{
     font-weight: 300;
     margin: auto;
+    transition: all ease-in-out .6s;
 }
 
 .nav .enlaces-header a{
@@ -65,6 +66,21 @@ nav{
     background-color: #d03d3d;
     border-color: #d03d3d;
     transition: all ease-in-out .45s;
+}
+
+.hamburguer{
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+  display: none;  
+}
+
+.hamburguer>i{
+    font-size: 25px;
+    margin: 20px 0;
 }
 
 .titulospro{
@@ -310,4 +326,74 @@ nav{
 
 .certificate a:hover {
     color: #fff;
+}
+
+/* MEDIA QUERYS */
+
+@media screen and (max-width: 600px){
+h1{
+    font-size: 25px;
+}
+
+.contenido-header{
+    width: 100%;
+    height: 560px;
+}
+.contenido-header>img{
+    width: 120px;
+    height: 120px;
+    animation: ease-in animacion 0.5s;
+    margin: 20px 0;
+}
+.articulo,.experience,.certificate,.skills{
+    width: 90%;
+}
+.skills{
+    margin-bottom: 20px;
+}
+.articulo,.experience,.content-skills{
+    margin-top: 20px;
+}
+.content-skills{
+    margin-bottom: 20px;
+}
+.content-certificados{
+    padding: 0;
+    margin-bottom: 30px;
+}
+.certificate{
+    margin: 10px;
+    padding: 10px;
+}
+.enlaces-header{
+    position: fixed;
+    background-color: #d03d3d;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.nav .enlaces-header a{
+    color: #FFFFFF;
+    background-color: #cf6c6c;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 20px;
+    width: 50%;
+    text-align: center;
+    clip-path: circle(0% at 0 0);
+}
+.nav .enlaces-header a:hover{
+    color: #d03d3d;
+    background-color: #fff;
+}
+.hamburguer{
+    display: block;
+}
+.nav .hamburgueropen{
+    clip-path: circle(150% at 0 0);
+}
 }

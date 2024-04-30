@@ -9,6 +9,11 @@
             margin: 0;
             padding: 0;
         }
+
+        body{
+            background-color: #a41c1c;
+        }
+
         .container {
             background-color: aquamarine;
             width: 100%;
@@ -38,9 +43,49 @@
         #three{
             background-color: #ff0000;
         }
+
+        /* media querys */
+
+        @media screen and (max-width:1200px){
+            body{
+                background-color: #fff;
+            }
+            h1{
+                color: orange;
+                background-color: #a41c1c;
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 1000px){
+            body{
+                background-color: rgb(247, 0, 255);
+            }
+        }
+
+        @media screen and (max-width: 800px){
+            body{
+                background-color: rgb(30, 0, 255);
+            }
+        }
+
+        @media screen and (max-width: 600px){
+            body{
+                background-color: #d9ff00;
+            }
+            #two{
+                background-color: #59a2a2;
+                order: 2;
+            }
+            #one{
+                background-color: #c3f228;
+                order: 1;
+            }
+        }
     </style>
 </head>
 <body>
+    <h1>Gerardo Duran</h1>
     <div class="container">
         <div class="element" id="one">#1</div>
         <div class="element" id="two">#2</div>
