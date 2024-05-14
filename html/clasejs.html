@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<input type="text" id="valores" disabled>
+    <button onclick="agregar()">AGREGAR</button>
+    <button onclick="eliminar()">ELIMINAR</button>
+    <button onclick="limpiar()">LIMPIAR</button>
+    <button onclick="imp_rever()">REVERSE</button>
+    <br>
+    <input type="text" id="valoresP">
+    <button onclick="agregarP()">AGREGAR</button>
+    <button onclick="eliminarP()">ELIMINAR</button>
+
 <body onload="load_page()">
 
     <div>
@@ -29,6 +39,12 @@
         </div>
         <div id="print"></div>
     </div>
+
+    <div id="print_age">
+        <input type="text">
+    </div>
+        <br>
+
     <!-- ARCHIVO DE js -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/funtcions.js"></script>
