@@ -80,3 +80,91 @@ function send_info(){
     }
     
 }
+
+
+// ARRAYS   
+var dias_sem = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+var array_num = [1,2,3,4,5,6,7,8,9];
+var array_mix = [1,2.5,"abc"];
+var array_mul = [
+  {name:"Gerardo", age:18, color:"green"},
+  {name:"Andrea", age:18, color:"black"},
+  {name:"William", age:18, color:"white"},
+  {name:"Wilder", age:32, color:"gray"},
+]
+
+var json_ejm = {
+  name:"Gerardo",
+  lastname: "Duran",
+  phone:"3175455170",
+  email:"gduranb@ufpso.edu.co"
+}
+
+console.log(dias_sem);
+console.log(array_num);
+console.log(array_mix);
+console.log(array_mul);
+console.log(json_ejm);
+
+for (let i = 0; i < dias_sem.length; i++) {
+  console.log(dias_sem[i]);
+}
+
+
+var j=0;
+while (j< array_num.length) {
+  console.log(array_num[j]);
+  j++
+}
+
+var acum = 0;
+for(let h = 0; h<array_num.length; h++){
+  acum += array_num[h]
+}
+console.log(acum);
+
+
+var acum2 = 0;
+
+for (let n = 0; n < array_mul.length; n++) {
+  acum2 += array_mul[n].age ;
+}
+document.write(acum2);
+document.getElementById("print_age").innerText = "El valor de la suma de las edades es: " + acum2;
+
+
+var array_ejem = [1,2,3];
+
+
+function agregarP(){
+  array_ejem.unshift(0)
+  document.getElementById("valoresP").value = array_ejem;
+}
+
+function eliminarP(){
+  array_ejem.shift()
+  document.getElementById("valoresP").value = array_ejem
+}
+
+var array_ejemplo = [1,2,3,4,5,6,7,8,9]
+function limpiar(){
+  document.getElementById("valores").value="";
+}
+// array.pop para agregar 
+// let un tipo de variable para funciones 
+function agregar(){
+  let val_new =array_ejemplo.push(10);
+  document.getElementById("valores").value=array_ejemplo;
+}
+// array.push añade un elemento al final 
+// no se puede agragar un elemento a la mitad de array por que daño el array 
+
+function eliminar(){
+  array_ejemplo.pop()
+  document.getElementById("valores").value="";
+}
+//agregar un imput que escriba un numero en el primero y que elimine el primero  
+function imp_rever(){
+  document.getElementById("text_rever").innerText= array_ejemplo.reverse();
+  document.getElementById("valores") = false;
+}
