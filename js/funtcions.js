@@ -129,8 +129,8 @@ var acum2 = 0;
 for (let n = 0; n < array_mul.length; n++) {
   acum2 += array_mul[n].age ;
 }
-document.write(acum2);
-document.getElementById("print_age").innerText = "El valor de la suma de las edades es: " + acum2;
+// document.write(acum2);
+// document.getElementById("print_age").innerText = "El valor de la suma de las edades es: " + acum2;
 
 
 var array_ejem = [1,2,3];
@@ -167,4 +167,44 @@ function eliminar(){
 function imp_rever(){
   document.getElementById("text_rever").innerText= array_ejemplo.reverse();
   document.getElementById("valores") = false;
+}
+
+// var fibonacci = [];
+// fibonacci[0] = 0;
+// fibonacci[1] = 1;
+// for (var i = 2; i < 10; i++) {
+//   fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
+// }
+// document.write(fibonacci);
+
+
+//FUNCION PARA ENVIAR EL NOMBRE CONCATENADO
+
+document.getElementById("fecha").value = new Date();
+var fecha = new Date();
+document.getElementById("dia").innerText = fecha.getDay();
+document.getElementById("año").innerText = fecha.getFullYear();
+document.getElementById("mes").innerText = fecha.getMonth();
+document.getElementById("dia_mes").innerText = fecha.getDate();
+document.getElementById("hora").innerText = fecha.getHours()
+document.getElementById("minute").innerText = fecha.getMinutes()
+
+
+function send_name(){
+  let name_one = document.getElementById("name_one").value;
+  let name_two = document.getElementById("name_two").value;
+  let search_var = document.getElementById("search_var").value;
+  let name_com = name_one.toUpperCase()+ " " +name_two.toUpperCase();
+  let variable = name_com.charAt(search_var);
+  Swal.fire(variable);
+  
+  if(search_var <= name_com.length && search_var != 0){
+    document.getElementById("print_name").innerText = "La letra correspondiente al #"+search_var+" es: "+variable;
+  }else if(isNaN(search_var)){
+    Swal.fire("No es una numero");
+  }
+  else{
+    Swal.fire("El numero no tiene valor o el valor no es un numero");
+    document.getElementById("print_name").innerText = "";
+  }
 }
